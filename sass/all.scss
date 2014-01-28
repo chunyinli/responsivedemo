@@ -1,0 +1,31 @@
+
+@import "vars";
+
+@import "compass";
+@import "compass-inuit/defaults";
+@import "compass-inuit/generic/mixins";
+@import "compass-inuit/generic/normalize";
+@import "compass-inuit/generic/reset";
+@import "compass-inuit/generic/shared";
+@import "compass-inuit/base/main";
+
+
+@import "mixins";
+@import "typography";
+@import "sprite";
+
+@import "common";
+
+
+
+
+
+
+
+body {
+    padding: 20px;
+}
+
+h1 {
+    color: #c3c;
+}

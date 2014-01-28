@@ -1,0 +1,76 @@
+
+@mixin linkStates () {
+    &:link,
+    &:visited,
+    &:active,
+    &:focus,
+    &:hover {
+        @content;
+    }
+}
+
+
+// Create CSS Triangles in a Breeze
+//$triangleDirection : top, bottom, left, right
+@mixin cssTriangle($triangleSize, $triangleColor, $triangleDirection) {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border: solid $triangleSize;
+    @if ($triangleDirection == top) {
+        border-color: $triangleColor transparent transparent transparent;
+    }
+    @if ($triangleDirection == bottom) {
+        border-color: transparent transparent $triangleColor transparent;
+    }
+    @if ($triangleDirection == left) {
+        border-color: transparent transparent transparent $triangleColor;
+    }
+    @if ($triangleDirection == right) {
+        border-color: transparent $triangleColor transparent transparent;
+    }
+    // .example { @include cssTriangle(5px, #fff, bottom); }
+}
+
+@mixin truncate($backgroundColor: #fff, $color: #000, $fontSize: 14px) {
+    @include transition-property(all);
+    @include transition-duration(0.2s);
+    @include transition-timing-function(linear);
+    background: $backgroundColor;
+    color: transparent;
+    font-size: 1px;
+    position: relative;
+
+    &:first-line {
+        color: $color;
+        font-size: $fontSize;
+    }
+
+    &:hover {
+        color: $color;
+        font-size: $fontSize;
+
+        //This removes gradient block when revealing all the text.
+        &:before {
+            display: none;
+        }
+    }
+
+    //This creates a gradient block that covers the end of the
+    //first line of text.
+    &:before {
+        //need fallback on IEs for linear gradient
+        @include background(
+            linear-gradient(right, $backgroundColor 20%, rgba($backgroundColor, 0))
+        );
+        bottom: 0;
+        content: "";
+        display: block;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        width: 180px;
+    }
+}
+
