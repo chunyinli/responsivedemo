@@ -9,23 +9,30 @@
 @import "compass-inuit/generic/shared";
 @import "compass-inuit/base/main";
 
+@import "breakpoint";
+@import "singularitygs";
+
 
 @import "mixins";
 @import "typography";
 @import "sprite";
-
-@import "common";
-
+@import "grid";
 
 
+// Actual styles starts here
+
+// base styles like *, html, body 
+@import "base";
+
+
+// "common" styles
+@import "common/common";
+@import "common/header";
 
 
 
 
-body {
-    padding: 20px;
-}
+// MODULES
 
-h1 {
-    color: #c3c;
-}
+
+

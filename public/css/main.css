@@ -780,24 +780,48 @@ html {
   min-height: 100%;
 }
 
-/* line 2, ../../sass/_common.scss */
+/* line 2, ../../sass/_base.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 6, ../../sass/_base.scss */
 html {
   height: 100%;
 }
 
-/* line 6, ../../sass/_common.scss */
+/* line 10, ../../sass/_base.scss */
 body {
+  color: #333333;
   font-size: 16px;
   font-family: Trebuchet MS, Helvetica, Arial, sans-serif;
-  height: 100%;
 }
 
-/* line 25, ../../sass/all.scss */
-body {
-  padding: 20px;
+/* line 2, ../../sass/common/_common.scss */
+.container, .site-nav {
+  max-width: 1250px;
+  margin: 0 auto;
 }
 
-/* line 29, ../../sass/all.scss */
-h1 {
-  color: #c3c;
+/* line 3, ../../sass/common/_header.scss */
+.site-header {
+  background: #eee;
+}
+
+/* line 9, ../../sass/common/_header.scss */
+.site-nav {
+  text-align: center;
+}
+
+/* line 14, ../../sass/common/_header.scss */
+.site-header__link {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  color: #78b9ff;
 }

@@ -1,0 +1,18 @@
+
+
+.site-header {
+    background: #eee;
+
+
+}
+
+.site-nav {
+    @extend %container;
+    text-align: center;
+}
+
+.site-header__link {
+    @include inline-block;
+    color: $textLinkColor;
+}
+
