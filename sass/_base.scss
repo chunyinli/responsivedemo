@@ -8,10 +8,17 @@ html {
 }
 
 body {
+    background: $greenLight;
     color: $darkGray;
     font-size: 16px;
     font-family: $baseFontFamily;
     // height: 100%;
 }
+
+a {
+    color: $textLinkColor;
+    text-decoration: none;
+}
+
 
 

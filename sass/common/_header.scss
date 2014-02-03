@@ -6,13 +6,58 @@
 
 }
 
-.site-nav {
-    @extend %container;
-    text-align: center;
-}
-
 .site-header__link {
     @include inline-block;
     color: $textLinkColor;
 }
+
+
+.site-logo {
+    text-align: center;
+}
+.site-logo__link {
+    @include inline-block;
+    vertical-align: middle;
+}
+.site-logo__img {
+    display: block;
+    width: 100%;
+}
+
+@include breakpoint(0 320px) {
+    .site-header {
+        @include pie-clearfix;
+        height: 56px;
+        position: relative;
+    }
+
+    .site-logo {
+        margin-left: 62px;
+        margin-right: 62px;
+        height: 100%;
+
+        &:before {
+            @include inline-block;
+            content: "";
+            width: 1px;
+            height: 100%;
+            margin-left: -1px;
+            vertical-align: middle;
+        }
+    }
+
+    .site-logo__link {
+        width: 120px;
+    }
+
+}
+
+@include breakpoint(321px) {
+    .site-logo {
+        padding: 15px 0;
+    }
+}
+
+
+
 
