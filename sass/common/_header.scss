@@ -24,13 +24,29 @@
     width: 100%;
 }
 
-@include breakpoint(0 320px) {
+@include breakpoint($breakpointMobile) {
     .site-header {
-        @include pie-clearfix;
-        height: 56px;
         position: relative;
+        height: 56px;
     }
 
+    .site-logo {
+        margin-left: 62px;
+        margin-right: 62px;
+    }
+    
+
+}
+
+@include breakpoint(0 1023px) {
+    .site-header {
+        @include pie-clearfix;
+    }
+    .site-logo__link {
+        margin-top: 8px;
+        margin-bottom: 8px;
+        width: 120px;
+    }
     .site-logo {
         margin-left: 62px;
         margin-right: 62px;
@@ -45,14 +61,9 @@
             vertical-align: middle;
         }
     }
-
-    .site-logo__link {
-        width: 120px;
-    }
-
 }
 
-@include breakpoint(321px) {
+@include breakpoint($breakpointDesktop) {
     .site-logo {
         padding: 15px 0;
     }

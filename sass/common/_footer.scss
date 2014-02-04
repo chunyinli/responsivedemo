@@ -4,12 +4,91 @@
     background: $redBean;
 }
 
+.site-footer__wrap {
+    @extend %container;
+}
+
 .site-footer__list {
     list-style: none outside none;
+    padding: 0;
+    margin: 0;
 }
 
 .site-footer__link {
-    color: #fff;
+    color: #eee;
+    display: block;
+    font-family: Georgia, Times New Roman, Serif;
 }
+
+@include breakpoint($breakpointMobile) {
+    .site-footer__list-item {
+
+        & + .site-footer__list-item {
+            border-color: #eee;
+            border-style: solid;
+            border-width: 1px 0 0;
+
+        }
+    }
+}
+
+@include breakpoint(0 1023px) {
+    .site-footer__list-item {
+        font-size: 13px;
+        padding: 6px 0;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+
+}
+
+
+@include breakpoint($breakpointTablet) {
+    .site-footer__list {
+        margin-left: -1px;
+        margin-top: -1px;
+        overflow: hidden;
+    }
+    .site-footer__list-item {
+        @include float-left;
+        border-color: #eee;
+        border-style: solid;
+        border-width: 1px 0 0 1px;
+        width: 50%;
+    }
+
+}
+
+@include breakpoint($breakpointDesktop) {
+    .site-footer__wrap {
+        overflow: hidden;
+        padding: 0 20px;
+    }
+    .site-footer__list {
+        @include float-right;
+        padding: 10px 0;
+    }
+    .site-footer__list-item {
+        @include inline-block;
+        font-size: 11px;
+
+        & + .site-footer__list-item {
+            border-color: $meat;
+            border-style: solid;
+            border-width: 0 0 0 1px;
+            margin-left: 8px;
+            
+            .site-footer__link {
+                margin-left: 8px;
+            }
+        }
+    }
+}
+
+
+
+
+
 
 
