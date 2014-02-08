@@ -8,4 +8,9 @@
     @extend %container;
 }
 
+.site-content {
+    position: relative;
+    z-index: 5;
+}
+
 

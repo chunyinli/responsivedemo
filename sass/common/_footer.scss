@@ -2,6 +2,8 @@
 
 .site-footer {
     background: $redBean;
+    position: relative;
+    z-index: 1;
 }
 
 .site-footer__wrap {
