@@ -67,6 +67,7 @@
     }
     .site-footer__list {
         @include float-right;
+        font-size: 0;
         padding: 10px 0;
     }
     .site-footer__list-item {
@@ -78,11 +79,15 @@
             border-style: solid;
             border-width: 0 0 0 1px;
             margin-left: 8px;
-            
+
             .site-footer__link {
                 margin-left: 8px;
             }
         }
+    }
+
+    .site-footer__link {
+        color: $meat;
     }
 }
 

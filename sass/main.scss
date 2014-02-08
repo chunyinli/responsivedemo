@@ -19,6 +19,11 @@
 @import "grid";
 
 
+//LIBs
+
+@import "lib/elastislide";
+
+
 // Actual styles starts here
 
 // base styles like *, html, body 
@@ -35,6 +40,12 @@
 
 
 // MODULES
+
+@import "modules/slider";
+
+
+
+
 
 
 
