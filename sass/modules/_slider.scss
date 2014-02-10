@@ -1,14 +1,20 @@
+$sliderNavSize: 50px;
+$sliderNavTriangleSizeY: 30px;
+$sliderNavTriangleSizeX: 15px;
 
 .module-slider {
     .elastislide-prev,
     .elastislide-next {
+        @include transition-property(all);
+        @include transition-duration(0.2s);
         @include border-radius(50%);
         @include hide-text;
+        @include opacity(0.5);
         border-color: #fff;
         border-style: solid;
         border-width: 2px;
-        width: 40px;
-        height: 40px;
+        width: $sliderNavSize;
+        height: $sliderNavSize;
         top: 50%;
         margin-top: -20px;
 
@@ -16,23 +22,27 @@
             content: "";
             position: absolute;
             top: 50%;
-            margin-top: -13px;
+            margin-top: -$sliderNavTriangleSizeY/2;
+        }
+
+        &:hover {
+            @include opacity(1);
         }
     }
     .elastislide-prev {
         left: 20px;
         &:after {
-            @include triangle($greenDark, 26px, 10px, 270);
+            @include triangle($greenDark, $sliderNavTriangleSizeY, $sliderNavTriangleSizeX, 270);
             right: 50%;
-            margin-right: -2px;
+            margin-right: -4px;
         }
     }
     .elastislide-next {
         right: 20px;
         &:after {
-            @include triangle($greenDark, 26px, 10px, 90);
+            @include triangle($greenDark, $sliderNavTriangleSizeY, $sliderNavTriangleSizeX, 90);
             left: 50%;
-            margin-left: -2px;
+            margin-left: -4px;
         }
     }
 }
