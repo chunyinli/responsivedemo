@@ -66,6 +66,18 @@ $sliderNavTriangleSizeX: 15px;
     width: 100%;
 }
 
+@include breakpoint(0 1023px) {
+    .module-slider {
+        margin-bottom: 20px;
+    }
+}
+
+@include breakpoint(1024px) {
+    .module-slider {
+        margin-bottom: 25px;
+    }
+}
+
 
 
 

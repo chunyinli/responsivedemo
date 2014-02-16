@@ -899,12 +899,15 @@ a {
 }
 
 /* line 2, ../../sass/common/_common.scss */
-.container, .site-footer__wrap {
+.container {
   max-width: 1250px;
   margin: 0 auto;
+  overflow: hidden;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
-/* line 11, ../../sass/common/_common.scss */
+/* line 14, ../../sass/common/_common.scss */
 .site-content {
   position: relative;
   z-index: 5;
@@ -1173,14 +1176,14 @@ a {
   z-index: 1;
 }
 
-/* line 13, ../../sass/common/_footer.scss */
+/* line 11, ../../sass/common/_footer.scss */
 .site-footer__list {
   list-style: none outside none;
   padding: 0;
   margin: 0;
 }
 
-/* line 19, ../../sass/common/_footer.scss */
+/* line 17, ../../sass/common/_footer.scss */
 .site-footer__link {
   color: #eee;
   display: block;
@@ -1188,7 +1191,7 @@ a {
 }
 
 @media (min-width: 0) and (max-width: 320px) {
-  /* line 28, ../../sass/common/_footer.scss */
+  /* line 26, ../../sass/common/_footer.scss */
   .site-footer__list-item + .site-footer__list-item {
     border-color: #eee;
     border-style: solid;
@@ -1196,7 +1199,7 @@ a {
   }
 }
 @media (min-width: 0) and (max-width: 1023px) {
-  /* line 38, ../../sass/common/_footer.scss */
+  /* line 36, ../../sass/common/_footer.scss */
   .site-footer__list-item {
     font-size: 13px;
     padding: 6px 0;
@@ -1205,14 +1208,14 @@ a {
   }
 }
 @media (min-width: 321px) and (max-width: 1023px) {
-  /* line 50, ../../sass/common/_footer.scss */
+  /* line 48, ../../sass/common/_footer.scss */
   .site-footer__list {
     margin-left: -1px;
     margin-top: -1px;
     overflow: hidden;
   }
 
-  /* line 55, ../../sass/common/_footer.scss */
+  /* line 53, ../../sass/common/_footer.scss */
   .site-footer__list-item {
     display: inline;
     float: left;
@@ -1223,7 +1226,7 @@ a {
   }
 }
 @media (min-width: 1024px) {
-  /* line 66, ../../sass/common/_footer.scss */
+  /* line 64, ../../sass/common/_footer.scss */
   .site-footer__wrap {
     overflow: hidden;
     padding: 0 20px;
@@ -1356,4 +1359,91 @@ a {
 .module-slider__image {
   display: block;
   width: 100%;
+}
+
+@media (min-width: 0) and (max-width: 1023px) {
+  /* line 70, ../../sass/modules/_slider.scss */
+  .module-slider {
+    margin-bottom: 20px;
+  }
+}
+@media (min-width: 1024px) {
+  /* line 76, ../../sass/modules/_slider.scss */
+  .module-slider {
+    margin-bottom: 25px;
+  }
+}
+/* line 7, ../../sass/modules/_section-container.scss */
+.section-title {
+  background: transparent url('/img/bg/dark-gray-slash.png') repeat-x scroll 0 bottom;
+  padding: 6px;
+}
+
+@media (min-width: 0) and (max-width: 1023px) {
+  /* line 13, ../../sass/modules/_section-container.scss */
+  .section-container {
+    margin-bottom: 15px;
+  }
+
+  /* line 16, ../../sass/modules/_section-container.scss */
+  .section-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+}
+@media (min-width: 1024px) {
+  /* line 24, ../../sass/modules/_section-container.scss */
+  .section-container {
+    width: 48.93617%;
+    clear: right;
+    float: left;
+    margin-left: 0;
+    margin-right: 2.12766%;
+    margin-bottom: 40px;
+  }
+  /* line 28, ../../sass/modules/_section-container.scss */
+  .section-container:last-child {
+    width: 48.93617%;
+    clear: right;
+    float: right;
+    margin-right: 0;
+  }
+
+  /* line 32, ../../sass/modules/_section-container.scss */
+  .section-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+}
+/* line 8, ../../sass/modules/_media-object.scss */
+.media-object__img {
+  display: block;
+  width: 100%;
+}
+
+@media (min-width: 0) and (max-width: 767px) {
+  /* line 15, ../../sass/modules/_media-object.scss */
+  .media-object__img-wrap {
+    margin-bottom: 15px;
+  }
+}
+@media (min-width: 768px) {
+  /* line 22, ../../sass/modules/_media-object.scss */
+  .media-object {
+    overflow: hidden;
+  }
+
+  /* line 25, ../../sass/modules/_media-object.scss */
+  .media-object__img-wrap {
+    display: inline;
+    float: left;
+    margin-right: 22px;
+  }
+
+  /* line 30, ../../sass/modules/_media-object.scss */
+  .media-object__content {
+    overflow: hidden;
+  }
 }

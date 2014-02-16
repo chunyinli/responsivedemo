@@ -1,0 +1,39 @@
+
+
+.section-container {
+    
+}
+
+.section-title {
+    background: transparent image-url("bg/dark-gray-slash.png") repeat-x scroll 0 bottom;
+    padding: 6px;
+}
+
+@include breakpoint(0 1023px) {
+    .section-container {
+        margin-bottom: 15px;
+    }
+    .section-title {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+}
+
+@include breakpoint(1024px) {
+    .section-container {
+        @include float-span(6);
+        margin-bottom: 40px;
+
+        &:last-child {
+            @include float-span(6, 'last');
+        }
+    }
+    .section-title {
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+}
+
+

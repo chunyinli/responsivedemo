@@ -6,9 +6,7 @@
     z-index: 1;
 }
 
-.site-footer__wrap {
-    @extend %container;
-}
+
 
 .site-footer__list {
     list-style: none outside none;
@@ -66,6 +64,8 @@
     .site-footer__wrap {
         overflow: hidden;
         padding: 0 20px;
+        @extend %container;
+        
     }
     .site-footer__list {
         @include float-right;
