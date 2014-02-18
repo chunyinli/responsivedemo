@@ -872,6 +872,158 @@ html {
   cursor: pointer;
 }
 
+/* 
+ *  Core Owl Carousel CSS File
+ *  v1.3.2
+ */
+/* clearfix */
+/* line 7, ../../sass/lib/owl.carousel.scss */
+.owl-carousel .owl-wrapper:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+/* display none until init */
+/* line 16, ../../sass/lib/owl.carousel.scss */
+.owl-carousel {
+  display: none;
+  position: relative;
+  width: 100%;
+  -ms-touch-action: pan-y;
+}
+
+/* line 22, ../../sass/lib/owl.carousel.scss */
+.owl-carousel .owl-wrapper {
+  display: none;
+  position: relative;
+  -webkit-transform: translate3d(0px, 0px, 0px);
+}
+
+/* line 27, ../../sass/lib/owl.carousel.scss */
+.owl-carousel .owl-wrapper-outer {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+/* line 32, ../../sass/lib/owl.carousel.scss */
+.owl-carousel .owl-wrapper-outer.autoHeight {
+  -webkit-transition: height 500ms ease-in-out;
+  -moz-transition: height 500ms ease-in-out;
+  -ms-transition: height 500ms ease-in-out;
+  -o-transition: height 500ms ease-in-out;
+  transition: height 500ms ease-in-out;
+}
+
+/* line 40, ../../sass/lib/owl.carousel.scss */
+.owl-carousel .owl-item {
+  float: left;
+}
+
+/* line 44, ../../sass/lib/owl.carousel.scss */
+.owl-controls .owl-page,
+.owl-controls .owl-buttons div {
+  cursor: pointer;
+}
+
+/* line 47, ../../sass/lib/owl.carousel.scss */
+.owl-controls {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* mouse grab icon */
+/* line 57, ../../sass/lib/owl.carousel.scss */
+.grabbing {
+  cursor: url(grabbing.png) 8 8, move;
+}
+
+/* fix */
+/* line 63, ../../sass/lib/owl.carousel.scss */
+.owl-carousel .owl-wrapper,
+.owl-carousel .owl-item {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+}
+
+/*
+*   Owl Carousel Owl Demo Theme 
+*   v1.3.2
+*/
+/* Clickable class fix problem with hover on touch devices */
+/* Use it for non-touch hover action */
+/* line 9, ../../sass/lib/owl.theme.scss */
+.owl-theme .owl-controls.clickable .owl-buttons div:hover {
+  filter: Alpha(Opacity=100);
+  /*IE7 fix*/
+  opacity: 1;
+  text-decoration: none;
+}
+
+/* Styling Pagination*/
+/* line 17, ../../sass/lib/owl.theme.scss */
+.owl-theme .owl-controls .owl-page {
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  /*IE7 life-saver */
+}
+
+/* line 22, ../../sass/lib/owl.theme.scss */
+.owl-theme .owl-controls .owl-page span {
+  display: block;
+  width: 12px;
+  height: 12px;
+  margin: 5px 7px;
+  filter: Alpha(Opacity=50);
+  /*IE7 fix*/
+  opacity: 0.5;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  background: #869791;
+}
+
+/* line 36, ../../sass/lib/owl.theme.scss */
+.owl-theme .owl-controls .owl-page.active span,
+.owl-theme .owl-controls.clickable .owl-page:hover span {
+  filter: Alpha(Opacity=100);
+  /*IE7 fix*/
+  opacity: 1;
+}
+
+/* If PaginationNumbers is true */
+/* line 43, ../../sass/lib/owl.theme.scss */
+.owl-theme .owl-controls .owl-page span.owl-numbers {
+  height: auto;
+  width: auto;
+  color: #FFF;
+  padding: 2px 10px;
+  font-size: 12px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+}
+
+/* preloading images */
+/* line 55, ../../sass/lib/owl.theme.scss */
+.owl-item.loading {
+  min-height: 150px;
+  background: url(AjaxLoader.gif) no-repeat center center;
+}
+
 /* line 2, ../../sass/_base.scss */
 * {
   -webkit-box-sizing: border-box;
@@ -1267,9 +1419,13 @@ a {
     color: #f5c0c3;
   }
 }
-/* line 7, ../../sass/modules/_slider.scss */
-.module-slider .elastislide-prev,
-.module-slider .elastislide-next {
+/* line 6, ../../sass/modules/_slider.scss */
+.module-slider {
+  background: #333333;
+}
+/* line 10, ../../sass/modules/_slider.scss */
+.module-slider .owl-prev,
+.module-slider .owl-next {
   -webkit-transition-property: all;
   -moz-transition-property: all;
   -o-transition-property: all;
@@ -1288,34 +1444,33 @@ a {
   text-align: left;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
-  border-color: #fff;
-  border-style: solid;
-  border-width: 2px;
+  background: #fff;
   width: 50px;
   height: 50px;
   top: 50%;
   margin-top: -20px;
+  position: absolute;
 }
-/* line 21, ../../sass/modules/_slider.scss */
-.module-slider .elastislide-prev:after,
-.module-slider .elastislide-next:after {
+/* line 23, ../../sass/modules/_slider.scss */
+.module-slider .owl-prev:after,
+.module-slider .owl-next:after {
   content: "";
   position: absolute;
   top: 50%;
   margin-top: -15px;
 }
-/* line 28, ../../sass/modules/_slider.scss */
-.module-slider .elastislide-prev:hover,
-.module-slider .elastislide-next:hover {
+/* line 30, ../../sass/modules/_slider.scss */
+.module-slider .owl-prev:hover,
+.module-slider .owl-next:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
-/* line 32, ../../sass/modules/_slider.scss */
-.module-slider .elastislide-prev {
+/* line 34, ../../sass/modules/_slider.scss */
+.module-slider .owl-prev {
   left: 20px;
 }
-/* line 34, ../../sass/modules/_slider.scss */
-.module-slider .elastislide-prev:after {
+/* line 36, ../../sass/modules/_slider.scss */
+.module-slider .owl-prev:after {
   display: block;
   width: 0;
   height: 0;
@@ -1325,12 +1480,12 @@ a {
   right: 50%;
   margin-right: -4px;
 }
-/* line 40, ../../sass/modules/_slider.scss */
-.module-slider .elastislide-next {
+/* line 42, ../../sass/modules/_slider.scss */
+.module-slider .owl-next {
   right: 20px;
 }
-/* line 42, ../../sass/modules/_slider.scss */
-.module-slider .elastislide-next:after {
+/* line 44, ../../sass/modules/_slider.scss */
+.module-slider .owl-next:after {
   display: block;
   width: 0;
   height: 0;
@@ -1340,35 +1495,35 @@ a {
   left: 50%;
   margin-left: -4px;
 }
-
-/* line 50, ../../sass/modules/_slider.scss */
-.module-slider__list {
-  font-size: 0;
-  max-height: none !important;
+/* line 51, ../../sass/modules/_slider.scss */
+.module-slider .owl-pagination {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
   width: 100%;
 }
 
-/* line 57, ../../sass/modules/_slider.scss */
-.module-slider__list-item {
-  max-width: none !important;
-  max-height: none !important;
-  font-size: 16px;
+/* line 60, ../../sass/modules/_slider.scss */
+.module-slider__list {
+  max-width: 1366px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* line 64, ../../sass/modules/_slider.scss */
+/* line 67, ../../sass/modules/_slider.scss */
 .module-slider__image {
   display: block;
   width: 100%;
 }
 
 @media (min-width: 0) and (max-width: 1023px) {
-  /* line 70, ../../sass/modules/_slider.scss */
+  /* line 75, ../../sass/modules/_slider.scss */
   .module-slider {
     margin-bottom: 20px;
   }
 }
 @media (min-width: 1024px) {
-  /* line 76, ../../sass/modules/_slider.scss */
+  /* line 81, ../../sass/modules/_slider.scss */
   .module-slider {
     margin-bottom: 25px;
   }

@@ -2,6 +2,7 @@
 
 (function(window, document, $, _, undefined) {
 
+    var RPD = this;
 
     var Slider = function(el) {
         this.el = el;
@@ -14,8 +15,10 @@
         
         this.$list = this.$el.find('[data-slider-list]');
 
-        this.$list.elastislide({
-            minItems : 1
+        this.$list.owlCarousel({
+            singleItem : true,
+            navigation : true,
+            slideSpeed : 800
         });
     };
 

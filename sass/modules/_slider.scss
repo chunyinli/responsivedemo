@@ -2,21 +2,23 @@ $sliderNavSize: 50px;
 $sliderNavTriangleSizeY: 30px;
 $sliderNavTriangleSizeX: 15px;
 
+
 .module-slider {
-    .elastislide-prev,
-    .elastislide-next {
+    background: $darkGray;
+
+    .owl-prev,
+    .owl-next {
         @include transition-property(all);
         @include transition-duration(0.2s);
         @include border-radius(50%);
         @include hide-text;
         @include opacity(0.5);
-        border-color: #fff;
-        border-style: solid;
-        border-width: 2px;
+        background: #fff;
         width: $sliderNavSize;
         height: $sliderNavSize;
         top: 50%;
         margin-top: -20px;
+        position: absolute;
 
         &:after {
             content: "";
@@ -29,7 +31,7 @@ $sliderNavTriangleSizeX: 15px;
             @include opacity(1);
         }
     }
-    .elastislide-prev {
+    .owl-prev {
         left: 20px;
         &:after {
             @include triangle($greenDark, $sliderNavTriangleSizeY, $sliderNavTriangleSizeX, 270);
@@ -37,7 +39,7 @@ $sliderNavTriangleSizeX: 15px;
             margin-right: -4px;
         }
     }
-    .elastislide-next {
+    .owl-next {
         right: 20px;
         &:after {
             @include triangle($greenDark, $sliderNavTriangleSizeY, $sliderNavTriangleSizeX, 90);
@@ -45,26 +47,87 @@ $sliderNavTriangleSizeX: 15px;
             margin-left: -4px;
         }
     }
+
+    .owl-pagination {
+        position: absolute;
+        bottom: 0;
+        text-align: center;
+        width: 100%;
+    }
+
 }
 
 .module-slider__list {
-    font-size: 0;
-    // overwrites elastislide plugin inline styles to allow normal height
-    max-height: none !important;
-    width: 100%;
+    max-width: 1366px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.module-slider__list-item {
-    // overwrites elastislide plugin inline styles to allow full width slide item
-    max-width: none !important;
-    max-height: none !important;
-    font-size: 16px;
-}
 
 .module-slider__image {
     display: block;
     width: 100%;
 }
+
+// .module-slider {
+//     .elastislide-prev,
+//     .elastislide-next {
+//         @include transition-property(all);
+//         @include transition-duration(0.2s);
+//         @include border-radius(50%);
+//         @include hide-text;
+//         @include opacity(0.5);
+//         border-color: #fff;
+//         border-style: solid;
+//         border-width: 2px;
+//         width: $sliderNavSize;
+//         height: $sliderNavSize;
+//         top: 50%;
+//         margin-top: -20px;
+
+//         &:after {
+//             content: "";
+//             position: absolute;
+//             top: 50%;
+//             margin-top: -$sliderNavTriangleSizeY/2;
+//         }
+
+//         &:hover {
+//             @include opacity(1);
+//         }
+//     }
+//     .elastislide-prev {
+//         left: 20px;
+//         &:after {
+//             @include triangle($greenDark, $sliderNavTriangleSizeY, $sliderNavTriangleSizeX, 270);
+//             right: 50%;
+//             margin-right: -4px;
+//         }
+//     }
+//     .elastislide-next {
+//         right: 20px;
+//         &:after {
+//             @include triangle($greenDark, $sliderNavTriangleSizeY, $sliderNavTriangleSizeX, 90);
+//             left: 50%;
+//             margin-left: -4px;
+//         }
+//     }
+// }
+
+// .module-slider__list {
+//     font-size: 0;
+//     // overwrites elastislide plugin inline styles to allow normal height
+//     max-height: none !important;
+//     width: 100%;
+// }
+
+// .module-slider__list-item {
+//     // overwrites elastislide plugin inline styles to allow full width slide item
+//     max-width: none !important;
+//     max-height: none !important;
+//     font-size: 16px;
+// }
+
 
 @include breakpoint(0 1023px) {
     .module-slider {
