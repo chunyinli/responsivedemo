@@ -5,52 +5,62 @@ $sliderNavTriangleSizeX: 15px;
 
 .module-slider {
     background: $darkGray;
-
-    .owl-prev,
-    .owl-next {
-        @include transition-property(all);
-        @include transition-duration(0.2s);
-        @include border-radius(50%);
-        @include hide-text;
-        @include opacity(0.5);
-        background: #fff;
-        width: $sliderNavSize;
-        height: $sliderNavSize;
-        top: 50%;
-        margin-top: -20px;
-        position: absolute;
-
-        &:after {
-            content: "";
-            position: absolute;
+    
+    .no-touch & {
+        .owl-prev,
+        .owl-next {
+            @include transition-property(all);
+            @include transition-duration(0.2s);
+            @include border-radius(50%);
+            @include hide-text;
+            @include opacity(0.5);
+            background: #fff;
+            width: $sliderNavSize;
+            height: $sliderNavSize;
             top: 50%;
-            margin-top: -$sliderNavTriangleSizeY/2;
+            margin-top: -20px;
+            position: absolute;
+
+            &:after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                margin-top: -$sliderNavTriangleSizeY/2;
+            }
+
+            &:hover {
+                @include opacity(1);
+            }
+        }
+        .owl-prev {
+            left: 20px;
+            &:after {
+                @include triangle($greenDark, $sliderNavTriangleSizeY, $sliderNavTriangleSizeX, 270);
+                right: 50%;
+                margin-right: -4px;
+            }
+        }
+        .owl-next {
+            right: 20px;
+            &:after {
+                @include triangle($greenDark, $sliderNavTriangleSizeY, $sliderNavTriangleSizeX, 90);
+                left: 50%;
+                margin-left: -4px;
+            }
         }
 
-        &:hover {
-            @include opacity(1);
+    }
+    .touch & {
+        .owl-buttons {
+            display: none;
         }
     }
-    .owl-prev {
-        left: 20px;
-        &:after {
-            @include triangle($greenDark, $sliderNavTriangleSizeY, $sliderNavTriangleSizeX, 270);
-            right: 50%;
-            margin-right: -4px;
-        }
-    }
-    .owl-next {
-        right: 20px;
-        &:after {
-            @include triangle($greenDark, $sliderNavTriangleSizeY, $sliderNavTriangleSizeX, 90);
-            left: 50%;
-            margin-left: -4px;
-        }
-    }
-
     .owl-pagination {
+        font-size: 0;
+        padding-top: 5px;
+        padding-bottom: 5px;
         position: absolute;
-        bottom: 0;
+        top: 100%;
         text-align: center;
         width: 100%;
     }
@@ -73,7 +83,7 @@ $sliderNavTriangleSizeX: 15px;
 
 @include breakpoint(0 1023px) {
     .module-slider {
-        margin-bottom: 20px;
+        margin-bottom: 40px;
     }
 }
 
