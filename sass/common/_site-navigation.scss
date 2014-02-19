@@ -56,7 +56,7 @@
 
     .site-nav__link {
         display: block;
-        padding: 8px;
+        padding: 12px;
         font-size: 16px;
 
         & + .site-nav__link {
@@ -68,7 +68,7 @@
 }
 
 
-@include breakpoint(321px) {
+@include breakpoint($mobileWidth + 1) {
 
     .site-nav {
         @include box-shadow(rgba(0, 0, 0, 0.2) 0 0 6px 0);

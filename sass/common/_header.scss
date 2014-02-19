@@ -39,7 +39,7 @@
 
 }
 
-@include breakpoint(0 1023px) {
+@include breakpoint(0 ($ipadLandscape - 1px)) {
     .site-header {
         @include pie-clearfix;
     }

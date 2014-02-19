@@ -9,9 +9,9 @@
     padding: 6px;
 }
 
-@include breakpoint(0 1023px) {
+@include breakpoint(0 ($ipadLandscape - 1px)) {
     .section-container {
-        margin-bottom: 15px;
+        margin-bottom: 25px;
     }
     .section-title {
         font-size: 20px;
@@ -20,10 +20,10 @@
     }
 }
 
-@include breakpoint(1024px) {
+@include breakpoint($breakpointDesktop) {
     .section-container {
         @include float-span(6);
-        margin-bottom: 40px;
+        margin-bottom: 50px;
 
         &:last-child {
             @include float-span(6, 'last');

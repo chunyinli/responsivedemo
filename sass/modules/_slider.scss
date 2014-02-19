@@ -67,29 +67,41 @@ $sliderNavTriangleSizeX: 15px;
 
 }
 
-.module-slider__list {
+.module-slider__container {
     max-width: 1366px;
     margin-left: auto;
     margin-right: auto;
 }
 
-
-.module-slider__image {
+.module-slider__slide {
     display: block;
-    width: 100%;
+
+    span {
+        display: block;
+    }
+
+    img {
+        display: block;
+        width: 100%;
+    }
+}
+
+.module-slider__picture {
+    display: block;
+
 }
 
 
 
-@include breakpoint(0 1023px) {
+@include breakpoint(0 ($ipadLandscape - 1px)) {
     .module-slider {
         margin-bottom: 40px;
     }
 }
 
-@include breakpoint(1024px) {
+@include breakpoint($breakpointDesktop) {
     .module-slider {
-        margin-bottom: 25px;
+        margin-bottom: 50px;
     }
 }
 

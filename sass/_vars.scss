@@ -20,8 +20,11 @@ $baseFontFamily: Trebuchet MS, Helvetica, Arial, sans-serif;
 
 // Breakpoints
 
-$breakpointMobile : 0 320px;
-$breakpointTablet : 321px 1023px;
-$breakpointDesktop : 1024px;
+$mobileWidth : 360px;
+$ipadLandscape : 1024px;
+
+$breakpointMobile : 0 $mobileWidth;
+$breakpointTablet : ($mobileWidth + 1px) ($ipadLandscape - 1px);
+$breakpointDesktop : $ipadLandscape;
 
 
