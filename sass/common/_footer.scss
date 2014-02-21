@@ -35,11 +35,14 @@
 @include breakpoint(0 ($ipadLandscape - 1px)) {
     .site-footer__list-item {
         font-size: 13px;
-        padding: 12px 0;
         text-align: center;
         text-transform: uppercase;
     }
-
+    
+    .site-footer__link {
+        padding: 12px 0;
+        
+    }
 
 }
 

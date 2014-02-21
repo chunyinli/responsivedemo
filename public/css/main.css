@@ -1262,20 +1262,24 @@ a {
   /* line 36, ../../sass/common/_footer.scss */
   .site-footer__list-item {
     font-size: 13px;
-    padding: 12px 0;
     text-align: center;
     text-transform: uppercase;
   }
+
+  /* line 42, ../../sass/common/_footer.scss */
+  .site-footer__link {
+    padding: 12px 0;
+  }
 }
 @media (min-width: 361px) and (max-width: 1023px) {
-  /* line 48, ../../sass/common/_footer.scss */
+  /* line 51, ../../sass/common/_footer.scss */
   .site-footer__list {
     margin-left: -1px;
     margin-top: -1px;
     overflow: hidden;
   }
 
-  /* line 53, ../../sass/common/_footer.scss */
+  /* line 56, ../../sass/common/_footer.scss */
   .site-footer__list-item {
     display: inline;
     float: left;
@@ -1286,13 +1290,13 @@ a {
   }
 }
 @media (min-width: 1024px) {
-  /* line 64, ../../sass/common/_footer.scss */
+  /* line 67, ../../sass/common/_footer.scss */
   .site-footer__wrap {
     overflow: hidden;
     padding: 0 20px;
   }
 
-  /* line 70, ../../sass/common/_footer.scss */
+  /* line 73, ../../sass/common/_footer.scss */
   .site-footer__list {
     display: inline;
     float: right;
@@ -1300,7 +1304,7 @@ a {
     padding: 10px 0;
   }
 
-  /* line 75, ../../sass/common/_footer.scss */
+  /* line 78, ../../sass/common/_footer.scss */
   .site-footer__list-item {
     display: -moz-inline-stack;
     display: inline-block;
@@ -1310,19 +1314,19 @@ a {
     *display: inline;
     font-size: 11px;
   }
-  /* line 79, ../../sass/common/_footer.scss */
+  /* line 82, ../../sass/common/_footer.scss */
   .site-footer__list-item + .site-footer__list-item {
     border-color: #f5c0c3;
     border-style: solid;
     border-width: 0 0 0 1px;
     margin-left: 8px;
   }
-  /* line 85, ../../sass/common/_footer.scss */
+  /* line 88, ../../sass/common/_footer.scss */
   .site-footer__list-item + .site-footer__list-item .site-footer__link {
     margin-left: 8px;
   }
 
-  /* line 91, ../../sass/common/_footer.scss */
+  /* line 94, ../../sass/common/_footer.scss */
   .site-footer__link {
     color: #f5c0c3;
   }
